@@ -1,6 +1,6 @@
 import requests
 import streamlit as st
-import streamlit_authenticator as sa
+
 
 # Using Streamlit for a better user interface 
 st.title("Ad Search")
