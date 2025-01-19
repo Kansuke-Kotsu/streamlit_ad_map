@@ -1,6 +1,4 @@
 import requests
-import json
-import pandas as pd
 import streamlit as st
 import streamlit_authenticator as sa
 
