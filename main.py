@@ -16,7 +16,7 @@ def invoke_lambda(api_gateway_url, payload):
         for i in range(3):
             # AWSから情報を取得
             name = result[f"ad_name_{i+1}"]
-            detail = result[f"as_detail_{i+1}"]
+            detail = result[f"ad_detail_{i+1}"]
             st.write(name)
             st.write(detail)
             st.write("")
