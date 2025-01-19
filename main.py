@@ -3,7 +3,7 @@ import streamlit as st
 
 
 # Using Streamlit for a better user interface 
-st.title("Ad Search")
+st.title("Ad Search for Instagram")
  
 
 def invoke_lambda(api_gateway_url, payload):
