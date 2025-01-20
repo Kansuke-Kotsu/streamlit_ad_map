@@ -28,8 +28,10 @@ st.write("2. 投稿された画像をGPTに入力して画像解析")
 st.write("3. 広告のタイトルと、内容(GPTからの解析結果)を表示します")
 
 
+
 input_1 = st.text_input("ID")
 input_2 = st.text_input("Password")
+st.write("※何も入力せずに「Search」ボタンを押すと、デフォルトで河津のアカウントでログインします")
 
 if st.button("Search"): # 検索ボタンを追加
     if input_1 == "" and input_2 == "":
