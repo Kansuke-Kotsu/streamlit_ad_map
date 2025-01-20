@@ -4,7 +4,6 @@ import streamlit as st
 
 # Using Streamlit for a better user interface 
 st.title("Ad Search for Instagram")
- 
 
 def invoke_lambda(api_gateway_url, payload):
     headers = {'Content-Type': 'application/json'}
@@ -28,13 +27,17 @@ input_1 = st.text_input("ID")
 input_2 = st.text_input("Password")
 
 if st.button("Search"): # 検索ボタンを追加
-        # リクエストペイロード (必要に応じて)
-        payload = {
-            "key1": input_1,
-            "key2": input_2,
-        }
+    if input_1 == "" and input_2 == "":
+            input_1 = "k.kansuke823@gmail.com"
+            input_2 = "Kawaz0823"
+        
+    # リクエストペイロード (必要に応じて)
+    payload = {
+        "key1": input_1,
+        "key2": input_2,
+    }
 
-        invoke_lambda(
-            api_gateway_url = "https://11l79ngo06.execute-api.ap-northeast-1.amazonaws.com/dev/instagram_test",
-            payload=payload
-            )
+    invoke_lambda(
+        api_gateway_url = "https://11l79ngo06.execute-api.ap-northeast-1.amazonaws.com/dev/instagram_test",
+        payload=payload
+        )
