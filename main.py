@@ -22,6 +22,11 @@ def invoke_lambda(api_gateway_url, payload):
     except:
         st.write(result["message"])
 
+st.write("ツールの説明:")
+st.write("1. コード上からInstagramにアクセスして、広告情報を抽出")
+st.write("2. 投稿された画像をGPTに入力して画像解析")
+st.write("3. 広告のタイトルと、内容(GPTからの解析結果)を表示します")
+
 
 input_1 = st.text_input("ID")
 input_2 = st.text_input("Password")
